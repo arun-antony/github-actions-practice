@@ -5,5 +5,10 @@ jobs:
     Lint-Job:
         runs-on: ubuntu-latest
         steps:
+            - run: echo "Checkout begin!"
+            - uses: actions/checkout@v4
+            - run: echo "Checkout complete!"
             - run: echo "Starting lint actions"
-            - run: npm lint
+            - run: npm ci
+            - run: npm run lint
+            - run: echo "lint complete"
