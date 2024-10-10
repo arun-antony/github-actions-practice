@@ -10,5 +10,6 @@ jobs:
             - run: echo "Checkout complete!"
             - run: echo "Starting lint actions"
             - run: npm ci
+            - run: npm init @eslint/config
             - run: npm run lint
             - run: echo "lint complete"
