@@ -1,0 +1,9 @@
+#Workflow for Lint, test and deploy
+name: lint, test and deploy
+on: [push]
+jobs:
+    Lint-Job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Starting lint actions"
+            - run: lint
