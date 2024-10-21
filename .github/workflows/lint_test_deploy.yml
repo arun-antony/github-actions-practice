@@ -10,6 +10,7 @@ jobs:
             - run: echo "Checkout complete!"
             - run: echo "Set up node"
             - uses: actions/setup-node@v4
+            - run: echo "Node set up completed!"
             - run: echo "Starting lint actions"
             - run: npm ci
             - run: npm run lint
