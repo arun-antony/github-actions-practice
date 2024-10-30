@@ -1,0 +1,18 @@
+#Workflow that runs when an issue is created and adds a label
+name: issue based workflow
+on: 
+    issues:
+        types: 
+            - opened
+
+jobs:
+    On-Issue-Created:
+            runs-on: ubuntu-latest
+            steps:
+                - run: echo "issue created"
+                - run: echo "do job"
+                - env:
+                    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    ISSUE_URL: ${{ github.event.issue.html_url }}
+                  run: 
+                    gh issue edit $ISSUE_URL --add-label "Right Away"
