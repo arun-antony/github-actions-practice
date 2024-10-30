@@ -16,3 +16,9 @@ jobs:
             - run: npm ci
             - run: npm run lint
             - run: echo "lint complete"
+            - run: echo "build"
+    Build-Job:
+        runs-on: ubuntu-latest
+        needs: Lint-Job
+        steps:
+            - run: echo "Build JOb running"
