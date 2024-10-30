@@ -6,7 +6,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Checkout begin!"
-            - uses: actions/checkout@v4
+            - name: Get code
+              uses: actions/checkout@v4
             - run: echo "Checkout complete!"
             - run: echo "Set up node"
             - uses: actions/setup-node@v4
