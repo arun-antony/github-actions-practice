@@ -1,0 +1,10 @@
+# workflow to output github context info
+name: Context info
+on: [push,issues]
+
+jobs:
+    output-info:
+                runs-on: ubuntu-latest
+                steps: 
+                        - run: echo "About to output github info"
+                        - run: echo "${{ toJson(github)}}"
