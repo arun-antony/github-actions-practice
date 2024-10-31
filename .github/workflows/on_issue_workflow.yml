@@ -7,6 +7,9 @@ on:
 
 jobs:
     On-Issue-Created:
+            permissions: write-all
+            name: print-token
+            environment: dev
             runs-on: ubuntu-latest
             steps:
                 - run: echo "issue created"
